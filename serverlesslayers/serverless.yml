@@ -1,0 +1,27 @@
+service: serverless-layers
+
+# The `provider` block defines where your service will be deployed
+provider:
+  name: aws
+  runtime: nodejs8.10
+  environment:
+    NODE_PATH: "./:/opt/node_modules"
+
+# layers 
+layers:
+  moment:
+    path: ../layers/moment-layer
+    compatibleRuntimes:
+      - nodejs8.10  
+  
+# The `functions` block defines what code to deploy
+functions:
+  helloWorld:
+    handler: handler.helloWorld
+    layers:
+      - {Ref: MomentLambdaLayer}    
+    events:
+      - http:
+          path: hello-world
+          method: get
+          cors: true
