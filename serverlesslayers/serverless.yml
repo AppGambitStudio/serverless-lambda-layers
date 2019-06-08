@@ -12,7 +12,10 @@ layers:
   moment:
     path: ../layers/moment-layer
     compatibleRuntimes:
-      - nodejs8.10  
+      - nodejs8.10
+    package:
+      include:
+        - node_modules/**
   
 # The `functions` block defines what code to deploy
 functions:
