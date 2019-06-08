@@ -9,7 +9,7 @@ module.exports.helloWorld = (event, context, callback) => {
       'Access-Control-Allow-Origin': '*', // Required for CORS support to work
     },
     body: JSON.stringify({
-      message: `Today is ${moment().format('ddd')}`
+      message: `Today is ${moment().format('DD/MMM/YYYY')}`
     }),
   };
 

@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "moment": "^2.24.0"
+    "moment": "^2.24.0",
+    "serverless-offline": "^5.2.1"
   }
 }

@@ -28,3 +28,6 @@ functions:
           path: hello-world
           method: get
           cors: true
+
+plugins:
+  - serverless-offline
